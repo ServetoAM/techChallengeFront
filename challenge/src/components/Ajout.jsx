@@ -47,35 +47,50 @@ function Ajout() {
 
   return (
     <div>
-      <h2>Ajouter un(e) Argonaute</h2>
-      <form className="new-member-form">
-        <label htmlFor="name">Nom de l'Argonaute</label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Nom du membre"
-          value={nameToAdd}
-          onChange={(e) => setNameToAdd(e.target.value)}
-        />
-        <button onClick={add}>Envoyer</button>
-      </form>
-
-      <h2>Membres de l'équipage</h2>
-      <section className="member-list">
-        {membres.map((membre, i) => (
-          <p key={membre.id}>
-            {membre.Nom}
-            <span
-              onClick={() => {
-                supp(membre.id);
-              }}
-            >
-              &nbsp;X
-            </span>
-          </p>
-        ))}
-      </section>
+      <div class=" flex flex-col justify-center m-2">
+        <h2 class="flex  justify-center m-9 p-4 text-4xl font-medium border-2 border-red-200 rounded-lg">
+          Ajouter un(e) Argonaute
+        </h2>
+        <form className="new-member-form" class=" flex flex-row justify-center">
+          <label htmlFor="name" class="flex justify-center m-2 p-2">
+            Nom de l'Argonaute :
+          </label>
+          <input
+            class="flex justify-center w-50 m-2 p-2"
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Nom du membre"
+            value={nameToAdd}
+            onChange={(e) => setNameToAdd(e.target.value)}
+          />
+          <button
+            onClick={add}
+            class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 border border-yellow-200 rounded"
+          >
+            Envoyer
+          </button>
+        </form>
+      </div>
+      <div class="flex m-9 justify-center">
+        <h2 class="flex  justify-center m-9 p-4 text-xl font-medium">
+          Membres de l'équipage
+        </h2>
+        <section class="flex grid gap-4 grid-cols-3 m-3">
+          {membres.map((membre, i) => (
+            <p key={membre.id}>
+              {membre.Nom}
+              <span
+                onClick={() => {
+                  supp(membre.id);
+                }}
+              >
+                &nbsp;X
+              </span>
+            </p>
+          ))}
+        </section>
+      </div>
     </div>
   );
 }
