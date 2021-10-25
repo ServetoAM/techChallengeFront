@@ -73,24 +73,24 @@ function Ajout() {
         </form>
       </div>
       <div class="flex m-9 justify-center">
-        <h2 class="flex  justify-center m-9 p-4 text-xl font-medium">
+        <h2 class="flex  justify-center m-9 text-xl font-medium">
           Membres de l'équipage
         </h2>
-        <section class="flex grid gap-4 grid-cols-3 m-3">
-          {membres.map((membre, i) => (
-            <p key={membre.id}>
-              {membre.Nom}
-              <span
-                onClick={() => {
-                  supp(membre.id);
-                }}
-              >
-                &nbsp;X
-              </span>
-            </p>
-          ))}
-        </section>
       </div>
+      <section class="flex grid gap-x-2 gap-y-4 grid-cols-3 grid-flow-row">
+        {membres.map((membre, i) => (
+          <p class="flex justify-center m-2" key={membre.id}>
+            {membre.Nom}
+            <span
+              onClick={() => {
+                supp(membre.id);
+              }}
+            >
+              &nbsp;X
+            </span>
+          </p>
+        ))}
+      </section>
     </div>
   );
 }

@@ -2,10 +2,20 @@ import React from "react";
 
 function Footer() {
   return (
-    <div class="flex justify-end m-9">
+    <div
+      class="flex justify-end border-t-4 border-red-500
+    fixed
+    inset-x-0
+    bottom-0
+    p-4"
+    >
       <p>
         Réalisé par Jason en Anthestérion de l'an 515 avant JC par{" "}
-        <a href="https://github.com/ServetoAM?tab=repositories" target="_blank" class="italic">
+        <a
+          href="https://github.com/ServetoAM?tab=repositories"
+          target="_blank"
+          class="italic"
+        >
           Anne-Marie Serveto.
         </a>
       </p>
