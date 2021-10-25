@@ -4,10 +4,12 @@ function Footer() {
   return (
     <div
       class="flex justify-end border-t-4 border-red-500
-    fixed
+    relative
     inset-x-0
     bottom-0
-    p-4"
+    p-4
+    mt-9
+    mb-0"
     >
       <p>
         Réalisé par Jason en Anthestérion de l'an 515 avant JC par{" "}

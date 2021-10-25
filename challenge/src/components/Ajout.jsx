@@ -48,7 +48,7 @@ function Ajout() {
   return (
     <div>
       <div class=" flex flex-col justify-center m-2">
-        <h2 class="flex  justify-center m-9 p-4 text-4xl font-medium border-2 border-red-200 rounded-lg">
+        <h2 class="flex  justify-center m-9 p-4 text-4xl font-medium border-2 border-4 border-red-200 rounded-lg">
           Ajouter un(e) Argonaute
         </h2>
         <form className="new-member-form" class=" flex flex-row justify-center">
